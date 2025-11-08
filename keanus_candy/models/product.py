@@ -32,6 +32,14 @@ class Candy(Product):
             raise ValueError("Not enough stock")
         self.quantity -= amount
 
+    def add_stock(self, amount: int):
+        """Increase the stock quantity by the specified amount."""
+        self.quantity += amount
+
+    def set_stock(self, amount: int):
+        """Set the stock quantity to the specified amount."""
+        self.quantity = amount
+
 
 class Catalog:
     """Collection of all candies."""
